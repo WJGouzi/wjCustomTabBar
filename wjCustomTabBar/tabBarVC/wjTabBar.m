@@ -7,7 +7,7 @@
 //
 
 #import "wjTabBar.h"
-
+#import "wjTestVC.h"
 
 @interface wjTabBar ()
 
@@ -26,6 +26,7 @@
         [_publishButton setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         [_publishButton setTitle:@"special" forState:UIControlStateNormal];
         [_publishButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_publishButton setBackgroundColor:[UIColor blueColor]];
         // 发布按钮的点击事件
         [_publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_publishButton];
@@ -69,8 +70,11 @@
 
 
 - (void)publishClick {
-
     NSLog(@"点击了");
+    
+    if ([self.delegate performSelector:@selector(specailButtonClickAction)]) {
+        [self.delegate specailButtonClickAction];
+    }
 }
 
 @end

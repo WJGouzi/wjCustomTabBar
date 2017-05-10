@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B51B8B71EC2AC2B0084FF86 /* wjMainNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B51B8B61EC2AC2B0084FF86 /* wjMainNavVC.m */; };
+		9B51B8BA1EC2B8850084FF86 /* wjTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B51B8B91EC2B8850084FF86 /* wjTestVC.m */; };
 		9BDEC0A21EBB197C006FDAA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDEC0A11EBB197C006FDAA3 /* main.m */; };
 		9BDEC0A51EBB197C006FDAA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDEC0A41EBB197C006FDAA3 /* AppDelegate.m */; };
 		9BDEC0AB1EBB197C006FDAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BDEC0A91EBB197C006FDAA3 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B51B8B51EC2AC2B0084FF86 /* wjMainNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjMainNavVC.h; sourceTree = "<group>"; };
+		9B51B8B61EC2AC2B0084FF86 /* wjMainNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjMainNavVC.m; sourceTree = "<group>"; };
+		9B51B8B81EC2B8850084FF86 /* wjTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjTestVC.h; sourceTree = "<group>"; };
+		9B51B8B91EC2B8850084FF86 /* wjTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjTestVC.m; sourceTree = "<group>"; };
 		9BDEC09D1EBB197B006FDAA3 /* wjCustomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wjCustomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDEC0A11EBB197C006FDAA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BDEC0A31EBB197C006FDAA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,8 +71,12 @@
 				9BDEC0A41EBB197C006FDAA3 /* AppDelegate.m */,
 				9BDEC0C31EBB1BBF006FDAA3 /* wjTabBarVC.h */,
 				9BDEC0C41EBB1BBF006FDAA3 /* wjTabBarVC.m */,
+				9B51B8B51EC2AC2B0084FF86 /* wjMainNavVC.h */,
+				9B51B8B61EC2AC2B0084FF86 /* wjMainNavVC.m */,
 				9BDEC0C61EBB1CC2006FDAA3 /* wjTabBar.h */,
 				9BDEC0C71EBB1CC2006FDAA3 /* wjTabBar.m */,
+				9B51B8B81EC2B8850084FF86 /* wjTestVC.h */,
+				9B51B8B91EC2B8850084FF86 /* wjTestVC.m */,
 				9BDEC0A91EBB197C006FDAA3 /* Main.storyboard */,
 				9BDEC0AC1EBB197C006FDAA3 /* Assets.xcassets */,
 				9BDEC0AE1EBB197C006FDAA3 /* LaunchScreen.storyboard */,
@@ -156,9 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDEC0C81EBB1CC2006FDAA3 /* wjTabBar.m in Sources */,
+				9B51B8B71EC2AC2B0084FF86 /* wjMainNavVC.m in Sources */,
 				9BDEC0A51EBB197C006FDAA3 /* AppDelegate.m in Sources */,
 				9BDEC0C51EBB1BBF006FDAA3 /* wjTabBarVC.m in Sources */,
 				9BDEC0A21EBB197C006FDAA3 /* main.m in Sources */,
+				9B51B8BA1EC2B8850084FF86 /* wjTestVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +329,7 @@
 				9BDEC0B61EBB197C006FDAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

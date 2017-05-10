@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol wjTabBarDelegate <NSObject>
+
+- (void)specailButtonClickAction;
+
+@end
+
 @interface wjTabBar : UITabBar
+
+/** delegate */
+@property (nonatomic, weak) id<wjTabBarDelegate> delegate;
+
 
 @end

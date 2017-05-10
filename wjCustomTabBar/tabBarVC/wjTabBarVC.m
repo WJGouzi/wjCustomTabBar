@@ -7,9 +7,11 @@
 //
 
 #import "wjTabBarVC.h"
+#import "wjMainNavVC.h"
 #import "wjTabBar.h"
+#import "wjTestVC.h"
 
-@interface wjTabBarVC ()
+@interface wjTabBarVC () <wjTabBarDelegate>
 
 @end
 
@@ -33,15 +35,21 @@
 
 - (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
     //    vc.view.backgroundColor = wjRandomColor;  // 设置背景为随机色
-    vc.tabBarItem.title = title;
+    vc.title = title;
     if (image.length) { // 图片名有具体值，判断图片传入值是空还是nil
         vc.tabBarItem.image = [UIImage imageNamed:image];
         vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     }
-    [self addChildViewController:vc];
+    
+    wjMainNavVC *nav = [[wjMainNavVC alloc] initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 
 
+#pragma mark - delegate
+- (void)specailButtonClickAction {
+    [self presentViewController:[[wjTestVC alloc] init] animated:YES completion:nil];
+}
 
 
 @end
