@@ -22,8 +22,8 @@
 - (UIButton *)publishButton {
     if (!_publishButton) {
         _publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_publishButton setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
-        [_publishButton setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [_publishButton setImage:[UIImage imageNamed:@"tab_recent_nor"] forState:UIControlStateNormal];
+        [_publishButton setImage:[UIImage imageNamed:@"tab_qworld_nor"] forState:UIControlStateHighlighted];
         [_publishButton setTitle:@"special" forState:UIControlStateNormal];
         [_publishButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [_publishButton setBackgroundColor:[UIColor blueColor]];

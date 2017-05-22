@@ -26,10 +26,10 @@
 
 - (void)setTabBar {
     /**** 添加子控制器 ****/
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"精华" image:@"tab_buddy_nor" selectedImage:@"tab_qworld_nor"];
+    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"新帖" image:@"tab_me_nor" selectedImage:@"tab_recent_nor"];
+    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"关注" image:@"tab_recent_nor" selectedImage:@"tab_buddy_nor"];
+    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"我" image:@"tab_me_nor" selectedImage:@"tab_buddy_nor"];
     [self setValue:[[wjTabBar alloc] init] forKeyPath:@"tabBar"];
 }
 
@@ -42,6 +42,8 @@
     }
     
     wjMainNavVC *nav = [[wjMainNavVC alloc] initWithRootViewController:vc];
+//    nav.tabBarItem.title = [NSString stringWithFormat:@"vc-%@",title];
+//    nav.tabBarItem.badgeValue = @"10";
     [self addChildViewController:nav];
 }
 
