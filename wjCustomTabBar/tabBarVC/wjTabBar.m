@@ -24,7 +24,6 @@
         [_publishButton setImage:[UIImage imageNamed:@"tab_qworld_nor"] forState:UIControlStateHighlighted];
         [_publishButton setTitle:@"special" forState:UIControlStateNormal];
         [_publishButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [_publishButton setBackgroundColor:[UIColor blueColor]];
         // 发布按钮的点击事件
         [_publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_publishButton];
@@ -67,8 +66,8 @@
     /**** 设置所有UITabBarButton的frame ****/
     // 按钮的尺寸
     CGFloat buttonW = self.frame.size.width / 5;
-    CGFloat buttonH = self.frame.size.height;
-    CGFloat buttonY = 0;
+    CGFloat buttonH = 49;// self.frame.size.height;
+    CGFloat buttonY = 23;
     // 按钮索引
     int buttonIndex = 0;
     

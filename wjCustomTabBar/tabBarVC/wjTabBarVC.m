@@ -11,6 +11,13 @@
 #import "wjTabBar.h"
 #import "wjTestVC.h"
 
+// 底部安全区域高度
+#define SafeArea_DownHeight  (Screen_Height >= 812 ? 34 : 0)
+// 屏幕宽度
+#define Screen_Width [UIScreen mainScreen].bounds.size.width
+// 屏幕高度
+#define Screen_Height [UIScreen mainScreen].bounds.size.height
+
 @interface wjTabBarVC () <wjTabBarDelegate>
 
 @end
@@ -23,6 +30,14 @@
     [self setTabBar];
 }
 
+- (void)viewDidLayoutSubviews {
+    // 重新定义tabbar的高度
+    [super viewDidLayoutSubviews];
+    CGRect frame = self.tabBar.frame;
+    frame.size.height = 72;
+    frame.origin.y = Screen_Height - frame.size.height - SafeArea_DownHeight;
+    self.tabBar.frame = frame;
+}
 
 - (void)setTabBar {
     /**** 添加子控制器 ****/
@@ -30,7 +45,9 @@
     [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"新帖" image:@"tab_me_nor" selectedImage:@"tab_recent_nor"];
     [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"关注" image:@"tab_recent_nor" selectedImage:@"tab_buddy_nor"];
     [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"我" image:@"tab_me_nor" selectedImage:@"tab_buddy_nor"];
-    [self setValue:[[wjTabBar alloc] init] forKeyPath:@"tabBar"];
+    wjTabBar *myTabbar = [[wjTabBar alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 72)];
+    myTabbar.delegate = self;
+    [self setValue:myTabbar forKeyPath:@"tabBar"];
 }
 
 - (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
